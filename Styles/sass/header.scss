@@ -1,0 +1,29 @@
+﻿nav {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background-color: #42BA87;
+}
+
+.navigationbar {
+    background-color: #42BA87;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 2rem;
+}
+
+.navigationbar-left {
+    background-color: #42BA87;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.navigationbar-right {
+    background-color: #42BA87;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}

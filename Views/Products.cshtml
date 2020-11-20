@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Products>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("f5acba93-5331-4a7f-a5e4-798c290bac04"))
+    .Children()
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+<div class="products-grid">
+    @foreach (var item in selection)
+    {
+        <div class="product-card text-center">
+            <img src="@item.Value("productImage")?mode=resize&width=1000&upscale=false" class="card-img-top product-card-img" alt="...">
+            <a href="@item.Url()" class="card-title">
+                <label>@item.Name</label>
+            </a>
+        </div>
+    }
+</div>

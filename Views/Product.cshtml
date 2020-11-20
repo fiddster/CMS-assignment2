@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Product>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+<div class="grid-50-50">
+    <div class="product-left">
+        <div class="product-image-container">
+            @if (Model.Value("productImage") != null)
+            {
+                <img src="@Model.Value("productImage")?mode=resize&width=1000&upscale=false" class="img-fluid" />
+            }
+        </div>
+    </div>
+    <div class="product-right">
+        <h2>
+            @Model.Value("productName")
+        </h2>
+        <div class="product-tags-container">
+            @{
+                var tags = Model.GetProperty("productTags").Value<IEnumerable<string>>();
+                <ul class="list-group list-group-horizontal list-group-flush">
+                    @foreach (var tag in tags)
+                    {
+                        <li class="list-group-item">
+                            <button class="btn btn-primary">
+                                <span>@tag</span>
+                            </button>
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+        <p>
+            @Model.Value("productDescription")
+        </p>
+        <button class="btn btn-lg btn-primary">Buy</button>
+    </div>
+</div>
+
+
+
+
+
+

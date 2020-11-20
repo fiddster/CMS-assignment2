@@ -1,0 +1,34 @@
+@import 'header.scss';
+@import 'home.scss';
+@import 'products.scss';
+@import 'product.scss';
+@import 'footer.scss';
+
+body {
+    background-color: #527C96;
+    margin: 0;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #527C96;
+    color: #CCF6FF !important;
+    min-height: 80vh;
+}
+
+legend {
+    margin-top: 1rem;
+}
+
+.container{
+    width: 100%;
+}
+
+.list-group-item {
+    background: none;
+}
+
+a {
+    color: #CCF6FF;
+}

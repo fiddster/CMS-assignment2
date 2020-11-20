@@ -1,0 +1,30 @@
+﻿.grid-50-50{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.product-image-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    img {
+        max-width: 90%;
+        max-height: 550px;
+        object-fit: cover;
+        object-position: center;
+        margin: 1rem auto;
+    }
+}
+
+.product-tags-container{
+    margin-top:2rem;
+    *{
+        border: none;
+    }
+}
+
+ul {
+    max-width: 90%;
+    width: auto;
+}

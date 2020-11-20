@@ -1,0 +1,16 @@
+﻿footer {
+    background-color: #42BA87;
+    color: #CCF6FF;
+    padding-top: 1rem;
+
+    .list-group {
+        justify-content: space-evenly;
+        align-content: center;
+        margin-bottom: 0;
+
+        .list-group-item {
+            border: none !important;
+            background: none;
+        }
+    }
+}
