@@ -5,10 +5,15 @@
 }
 
 <div class="home-grid-container ">
-    @if (Model.Value("welcomeImage") != null)
-    {
-        <img src="@Model.Value("welcomeImage")?mode=resize&width=1000&upscale=false" class="img-fluid home-image" />
+    
+    @{
+        var welcomeImage = Model.Value("welcomeImage");
+        if (welcomeImage is Image image)
+        {
+            <img src="@image.Url?mode=resize&width=1000&upscale=false" class="img-fluid home-image"/>
+        }
     }
+    
 
     
     <span class="home-title">
@@ -27,8 +32,12 @@
         </p>
     </div>
     
-    @if (Model.Value("latestNewsImage") != null)
-    {
-        <img src="@Model.Value("latestNewsImage")?mode=resize&width=1000&upscale=false" class="img-fluid home-image" />
+    @{
+        var latestNewsImage = Model.Value("latestNewsImage");
+        if (latestNewsImage is Image image2)
+        {
+            <img src="@image2.Url?mode=resize&width=1000&upscale=false" class="img-fluid home-image"/>
+        }
     }
+    
 </div>

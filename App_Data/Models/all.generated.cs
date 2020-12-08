@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "39765834d2c1a64")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c76f010c4acce544")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -66,7 +66,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.0")]
 		[ImplementPropertyType("latestNewsImage")]
-		public global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue LatestNewsImage => this.Value<global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue>("latestNewsImage");
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent LatestNewsImage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("latestNewsImage");
 
 		///<summary>
 		/// Latest News Text
@@ -87,7 +87,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.0")]
 		[ImplementPropertyType("welcomeImage")]
-		public global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue WelcomeImage => this.Value<global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue>("welcomeImage");
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent WelcomeImage => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("welcomeImage");
 
 		///<summary>
 		/// Welcome Message
