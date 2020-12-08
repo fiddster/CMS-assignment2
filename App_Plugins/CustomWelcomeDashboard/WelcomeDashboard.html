@@ -1,0 +1,29 @@
+﻿<div class="welcome-dashboard" ng-controller="CustomWelcomeDashboardController as vm">
+
+    <div ng-switch="vm.isLoading">
+        <div ng-switch-when="true">
+            Loading...
+        </div>
+
+        <div ng-switch-when="false">
+            <div ng-switch="vm.hasData">
+                <div ng-switch-when="true">
+                    <h1>Quote of the day</h1>
+                    <div>
+                        <blockquote>{{vm.quoteData.contents.quotes[0].quote}}</blockquote>
+                        <span>Author: {{vm.quoteData.contents.quotes[0].author}}</span>
+                    </div>
+
+                    <div>
+                        <span>Provided by: <a href={{vm.quoteData.baseurl}}>{{vm.quoteData.baseurl}}</a></span>
+                    </div>
+                </div>
+                <div ng-switch-when="false">
+                    Couldn't load a quote
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
