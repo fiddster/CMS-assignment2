@@ -1,25 +1,23 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = "Master.cshtml";
 }
 
 <div class="home-grid-container ">
-    
+
     @{
         var welcomeImage = Model.Value("welcomeImage");
         if (welcomeImage is Image image)
         {
-            <img src="@image.Url?mode=resize&width=1000&upscale=false" class="img-fluid home-image"/>
+            <img src="@image.Url?mode=resize&width=1000&upscale=false" class="img-fluid home-image" />
         }
     }
-    
-
-    
     <span class="home-title">
         @Model.Value("welcomeMessage")
     </span>
-    
+
 </div>
 
 <div class="home-grid-container ">
@@ -31,13 +29,13 @@
             @Model.Value("latestNewsText")
         </p>
     </div>
-    
+
     @{
         var latestNewsImage = Model.Value("latestNewsImage");
         if (latestNewsImage is Image image2)
         {
-            <img src="@image2.Url?mode=resize&width=1000&upscale=false" class="img-fluid home-image"/>
+            <img src="@image2.Url?mode=resize&width=1000&upscale=false" class="img-fluid home-image" />
         }
     }
-    
+
 </div>
